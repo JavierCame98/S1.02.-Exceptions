@@ -21,15 +21,13 @@ public class Main {
         firstSell.addProduct(secondProduct);
 
 
-               // rafael di candia
-
         System.out.println("The total price of the selling is " + firstSell.totalPriceCalculation());
 
 
         System.out.println("=====");
         System.out.println("##3.Trying to catch IndexOutOfBoundsException in a Products List");
 
-        Sell.checkIndexOutOfBonus(firstProduct, 0);
+        Sell.checkIndexOutOfBonus(firstProduct, 2);
 
     }
 }
