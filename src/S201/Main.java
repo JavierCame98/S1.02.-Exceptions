@@ -9,11 +9,8 @@ public class Main {
         System.out.println("##1.Trying to catch EmptySaleException for an empty sell");
         Sell firstSell = new Sell();
 
-        try{
-            firstSell.totalPriceCalculation();
-        }catch (EmptySaleException e) {
-            System.out.println(e.getMessage());
-        }
+        firstSell.totalPriceCalculation();
+
         System.out.println("=====");
         System.out.println("##2.Saving and showing totalPriceCalculation method");
 
@@ -25,11 +22,9 @@ public class Main {
 
 
                // rafael di candia
-        try {
-            System.out.println("The total price of the selling is " + firstSell.totalPriceCalculation());
-        }catch (EmptySaleException e){
-            System.out.println("Unexpected error");
-        }
+
+        System.out.println("The total price of the selling is " + firstSell.totalPriceCalculation());
+
 
         System.out.println("=====");
         System.out.println("##3.Trying to catch IndexOutOfBoundsException in a Products List");
