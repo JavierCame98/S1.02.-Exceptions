@@ -15,15 +15,20 @@ public class Sell {
         products.add(p);
     }
 
-    public double totalPriceCalculation() throws EmptySaleException{
-        if(products.isEmpty()){
-            throw new EmptySaleException("For a sale first you have to make products");
+    public double totalPriceCalculation(){
+        try {
+            if(products.isEmpty()){
+                throw new EmptySaleException("The sell is empty");
+            }
+            double totalPrice = 0;
+            for (Product p : products) {
+                totalPrice += p.getPrice();
+            }
+            totalPriceOfSell = totalPrice;
+
+        }catch(EmptySaleException e){
+            System.out.println(e.getMessage());
         }
-        double totalPrice = 0;
-        for(Product p : products){
-            totalPrice += p.getPrice();
-        }
-        totalPriceOfSell = totalPrice;
         return totalPriceOfSell;
     }
 
