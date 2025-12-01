@@ -23,6 +23,8 @@ public class Main {
         firstSell.addProduct(firstProduct);
         firstSell.addProduct(secondProduct);
 
+
+               // rafael di candia
         try {
             System.out.println("The total price of the selling is " + firstSell.totalPriceCalculation());
         }catch (EmptySaleException e){
@@ -32,13 +34,7 @@ public class Main {
         System.out.println("=====");
         System.out.println("##3.Trying to catch IndexOutOfBoundsException in a Products List");
 
-        try{
-            List<Product> productsList = new ArrayList<>();
-            productsList.add(firstProduct);
-            productsList.get(2);
-        }catch(IndexOutOfBoundsException e){
-            System.out.println(e.getMessage());
-        }
+        Sell.checkIndexOutOfBonus(firstProduct, 0);
 
     }
 }

@@ -27,4 +27,15 @@ public class Sell {
         return totalPriceOfSell;
     }
 
+    public static void checkIndexOutOfBonus (Product testProduct, int index){
+        try{
+            List<Product> productsList = new ArrayList<>();
+            productsList.add(testProduct);
+            productsList.get(index);
+        }catch(IndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+
 }
