@@ -32,7 +32,7 @@ public class Sell {
         return totalPriceOfSell;
     }
 
-    public static void checkIndexOutOfBonus (Product testProduct, int index){
+    public static void checkIndexOutOfBonus (Product testProduct, int index) throws IndexOutOfBoundsException{
         try{
             List<Product> productsList = new ArrayList<>();
             productsList.add(testProduct);
